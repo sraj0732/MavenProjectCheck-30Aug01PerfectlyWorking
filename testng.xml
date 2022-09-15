@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="ActitimeTests">
+	<!--parameter name="username"  value="admin"/>
+	<parameter name="password"  value="manager"/-->
+
+	<listeners>
+		<listener class-name="com.actitime.base.BaseClass" />
+    
+	</listeners>
+
+
+
+  <test name="SmokeSuite">
+	<!--groups>
+		<run>
+			<include name="smoke" />
+		</run>
+	</groups-->
+	<!--parameter name="url" value="https://demo.actitime.com"> </parameter-->
+	
+	<!--classes>
+		<class name="com.actitime.tests.Login" />
+	</classes-->
+	<packages>
+		<package name="com.actitime.tests" />
+	</packages>
+  </test> 
+  
+</suite> 

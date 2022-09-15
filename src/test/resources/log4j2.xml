@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="INFO">
+	<Properties>
+		<Property name="baseDir">src/test/results</Property>
+	</Properties>
+	<Appenders>
+		<RollingFile name="RollingFile" fileName="${baseDir}/logs.txt"
+		filePattern="${baseDir}/$${date:yyyy-MM}/app-%d{MM-dd-yyyy}-%i.log.log">
+			<PatternLayout>
+				<Pattern>*************** %d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - ************** %m%n
+				</Pattern>
+			</PatternLayout>
+			<Policies>
+				<SizeBasedTriggeringPolicy size="1MB" />
+			</Policies>
+		</RollingFile>
+		<Console name="Console" target="SYSTEM_OUT">
+			<PatternLayout
+				pattern="*********** %d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - *************** %m%n" />
+		</Console>
+	</Appenders>
+	<Loggers>		
+		<Logger name="com.actitime.base" level="info" >
+			<AppenderRef ref="RollingFile" />
+			<AppenderRef ref="Console" />
+		</Logger>
+		<Root level="info">
+			<AppenderRef ref="Console" />
+		</Root>
+	</Loggers>
+</Configuration>
