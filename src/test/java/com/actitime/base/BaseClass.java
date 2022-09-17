@@ -57,7 +57,6 @@ public class BaseClass implements ITestListener {
 	public static ExtentTest elogger;
 	public ITestResult result;
 	public static BaseClass BaseClassObj;// = new BaseClass();
-	
 
 	// iTest Listener interface default methods... these will help us capture the
 	// running status of the tests
@@ -83,18 +82,21 @@ public class BaseClass implements ITestListener {
 			e.printStackTrace();
 		}
 	}
+	
+	
 
 //		@Parameters({"url"}) 
 	@BeforeMethod(alwaysRun = true)
 	public static void launchApplication(@Optional("https://demo.actitime.com") String x) throws IOException {
 		writeLog("Annotation Before method called");
-		switch (getConfigData("browser")) {
+		String browser = getConfigData("browser");
+		switch (browser) {
 		case "chrome":
 			System.setProperty("webdriver.chrome.driver", "./src/test/utilities/chromedriver.exe");
-				ChromeOptions options = new ChromeOptions();
-				options.addArguments("--headless");
-				driver = new ChromeDriver(options);
-//			driver = new ChromeDriver();
+//				ChromeOptions options = new ChromeOptions();
+//				options.addArguments("--headless");
+//				driver = new ChromeDriver(options);
+			driver = new ChromeDriver();
 			break;
 		case "firefox":
 			System.setProperty("webdriver.firefox.driver", "./src/test/utilities/geckodriver.exe");

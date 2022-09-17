@@ -19,12 +19,12 @@
 	</groups-->
 	<!--parameter name="url" value="https://demo.actitime.com"> </parameter-->
 	
-	<!--classes>
+	<classes>
 		<class name="com.actitime.tests.Login" />
-	</classes-->
-	<packages>
+	</classes>
+	<!--packages>
 		<package name="com.actitime.tests" />
-	</packages>
+	</packages-->
   </test> 
   
 </suite> 
