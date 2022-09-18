@@ -1,9 +1,9 @@
-1609222250
+1809222334
 Listener onStart called
 Annotation Before method called
 Listener onTestStart called for login_001
 Test login_001 called
 loginToActiTimeApplication called
-*************** 22:50:42.104 [main] INFO  com.actitime.base.BaseClass - ************** Logged in successfully
+*************** 23:34:38.191 [main] INFO  com.actitime.base.BaseClass - ************** Logged in successfully
 Annotation After method called
 Listener onFinish called
