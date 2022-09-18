@@ -90,15 +90,15 @@ public class BaseClass implements ITestListener {
 	public static void launchApplication(@Optional("https://demo.actitime.com") String x) throws IOException {
 		writeLog("Annotation Before method called");
 		String browser = getConfigData("browser");
-		switch (browser) {
-		case "chrome":
+		switch (browser.charAt(0)) {//Just to check
+		case 'c':
 			System.setProperty("webdriver.chrome.driver", "./src/test/utilities/chromedriver.exe");
 //				ChromeOptions options = new ChromeOptions();
 //				options.addArguments("--headless");
 //				driver = new ChromeDriver(options);
 			driver = new ChromeDriver();
 			break;
-		case "firefox":
+		case 'f':
 			System.setProperty("webdriver.firefox.driver", "./src/test/utilities/geckodriver.exe");
 			driver = new FirefoxDriver();
 			break;
