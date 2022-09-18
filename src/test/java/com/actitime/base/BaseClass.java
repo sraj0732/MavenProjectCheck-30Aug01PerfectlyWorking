@@ -90,7 +90,7 @@ public class BaseClass implements ITestListener {
 	public static void launchApplication(@Optional("https://demo.actitime.com") String x) throws IOException {
 		writeLog("Annotation Before method called");
 		String browser = getConfigData("browser");
-		switch (browser) {
+		switch (browser) {//Just to check
 		case "chrome":
 			System.setProperty("webdriver.chrome.driver", "./src/test/utilities/chromedriver.exe");
 //				ChromeOptions options = new ChromeOptions();
