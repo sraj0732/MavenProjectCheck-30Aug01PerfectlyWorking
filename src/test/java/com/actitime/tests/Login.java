@@ -36,14 +36,12 @@ public class Login extends BaseClass {
 	@Test
 	public static void login_001() throws IOException, InterruptedException {
 			writeLog("Test login_001 called");
-		System.out.println("Added 1 line");
 //			boolean results = CommonUtils.loginToActiTimeApplication(username, password);
 			boolean results = CommonUtils.loginToActiTimeApplication();
 //			Assert.assertTrue(results,"Could not login to actitime");
 			writeInfoLogs("Logged in successfully");
 //			int expected = 30;
 //			int actual = 30;
-			System.out.println("From login_001 from myworks branch");
 //			SoftAssert softassert = new SoftAssert();
 //			softassert.assertEquals(expected, actual,"The actual count is not equal");
 //			Assert.assertEquals(expected, actual,"The actual count is not matching expected count");
