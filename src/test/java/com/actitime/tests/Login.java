@@ -20,7 +20,7 @@ import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 
 public class Login extends BaseClass {
 
-	//	@Test(enabled = false) commented
+	//	@Test(enabled = false) commented and added
 	//	public static void login_003() throws IOException, InterruptedException{
 	//		try {
 	//			writeResult("login_003", "pass");
@@ -36,6 +36,7 @@ public class Login extends BaseClass {
 	@Test
 	public static void login_001() throws IOException, InterruptedException {
 			writeLog("Test login_001 called");
+		System.out.println("Added 1 line");
 //			boolean results = CommonUtils.loginToActiTimeApplication(username, password);
 			boolean results = CommonUtils.loginToActiTimeApplication();
 //			Assert.assertTrue(results,"Could not login to actitime");
