@@ -60,48 +60,48 @@ public class Login extends BaseClass {
 	}
 	
 //	@Test
-	public static void main(String args[]) throws IOException{
-
-		ExtentReports extent = new ExtentReports();
-		
-		File file = new File("./src/test/results/eresults5.html");
-		
-		ExtentSparkReporter reporter = new ExtentSparkReporter(file);
-		
-		extent.attachReporter(reporter);
-		System.out.println("The run is invoked");
-		ExtentTest elogger = extent.createTest("Invoking logs");
-		
-		elogger.log(Status.INFO, "First test");
-		elogger.log(Status.PASS, "Test is pass");
-		
-		extent.flush();
-		
-		
-	}
+//	public static void main(String args[]) throws IOException{
+//
+//		ExtentReports extent = new ExtentReports();
+//		
+//		File file = new File("./src/test/results/eresults5.html");
+//		
+//		ExtentSparkReporter reporter = new ExtentSparkReporter(file);
+//		
+//		extent.attachReporter(reporter);
+//		System.out.println("The run is invoked");
+//		ExtentTest elogger = extent.createTest("Invoking logs");
+//		
+//		elogger.log(Status.INFO, "First test");
+//		elogger.log(Status.PASS, "Test is pass");
+//		
+//		extent.flush();
+//		
+//		
+//	}
 	
-	public static void extentReport() throws IOException {
-		//Create object of extent reports
-				ExtentReports extent = new ExtentReports();
-				
-				//Creating the object of file class where we need to write the extent report
-				File file = new File("./src/test/results/eresults.html");
-				
-				//Create the object of Extent Spart Reporter to write the results to the report file
-				ExtentSparkReporter reporter = new ExtentSparkReporter(file);
-				
-				//Attaching the reporter to write the data
-				extent.attachReporter(reporter);
-				
-				ExtentTest elogger = extent.createTest("Sample Extent Teport Test");
-				
-				elogger.log(Status.INFO, "Starting the sample test case");
-				elogger.log(Status.INFO, "Trying to launch the browser");
-				elogger.log(Status.INFO, "The first test case is completed");
-				elogger.log(Status.PASS, "The first test case sample test case has passed");
-				
-				extent.flush();
-	}
+//	public static void extentReport() throws IOException {
+//		//Create object of extent reports
+//				ExtentReports extent = new ExtentReports();
+//				
+//				//Creating the object of file class where we need to write the extent report
+//				File file = new File("./src/test/results/eresults.html");
+//				
+//				//Create the object of Extent Spart Reporter to write the results to the report file
+//				ExtentSparkReporter reporter = new ExtentSparkReporter(file);
+//				
+//				//Attaching the reporter to write the data
+//				extent.attachReporter(reporter);
+//				
+//				ExtentTest elogger = extent.createTest("Sample Extent Teport Test");
+//				
+//				elogger.log(Status.INFO, "Starting the sample test case");
+//				elogger.log(Status.INFO, "Trying to launch the browser");
+//				elogger.log(Status.INFO, "The first test case is completed");
+//				elogger.log(Status.PASS, "The first test case sample test case has passed");
+//				
+//				extent.flush();
+//	}
 
 	
 
