@@ -35,8 +35,8 @@ public class Login extends BaseClass {
 //	@Test(priority=2, groups = { "smoke" }, dataProvider="excelLoginData", dataProviderClass=com.actitime.dataproviders.DataProviders.class)	
 	@Test
 	public static void login_001() throws IOException, InterruptedException {
-			writeLog("Test login_001 called");
-			System.out.println("Check loading");
+			writeInfoLogs("Test login_001 called");
+			writeInfoLogs("Check loading");
 //			boolean results = CommonUtils.loginToActiTimeApplication(username, password);
 			boolean results = CommonUtils.loginToActiTimeApplication();
 //			Assert.assertTrue(results,"Could not login to actitime");
