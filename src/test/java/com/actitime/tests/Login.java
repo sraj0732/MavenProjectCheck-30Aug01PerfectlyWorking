@@ -36,7 +36,6 @@ public class Login extends BaseClass {
 	@Test
 	public static void login_001() throws IOException, InterruptedException {
 			writeInfoLogs("Test login_001 called");
-			writeInfoLogs("Check loading");
 //			boolean results = CommonUtils.loginToActiTimeApplication(username, password);
 			boolean results = CommonUtils.loginToActiTimeApplication();
 //			Assert.assertTrue(results,"Could not login to actitime");
